@@ -1,0 +1,6 @@
+{
+  "name": "lalo-proxy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Serverless proxy that keeps the OpenAI key server-side for MindSwapped's Lalo chatbot."
+}
