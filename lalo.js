@@ -4,7 +4,7 @@
 //
 // Set OPENAI_API_KEY (and optionally OPENAI_MODEL) in your Vercel
 // project's Settings → Environment Variables, then redeploy.
-
+endpoint: 'https://skilltradeapp.vercel.app/api/lalo',
 module.exports = async (req, res) => {
   // Allow the MindSwapped page (any origin, since it's a static HTML file)
   // to call this endpoint.
