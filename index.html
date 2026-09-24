@@ -1432,7 +1432,7 @@ function openProfileModal(uid){
    keep using the built-in mock responses below. */
 const LALO_CONFIG = {
   apiKey:'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',
-  endpoint: 'https://mindswapped2.vercel.app/api/lalo',   
+  endpoint: 'https://skilltradeapp.vercel.app/api/lalo',   
   model: 'gpt-4o-mini',                 // e.g. 'https://your-project.vercel.app/api/lalo'
   systemPrompt: "You are Lalo, the friendly in-app assistant for MindSwapped, a skill-swap community with a credit system (teaching earns credits, learning spends them). Keep replies short, warm, and practical."
 };
@@ -1479,7 +1479,7 @@ function mockLaloReply(raw){
   if(/learn/.test(t)) return "Add it to your learn list with '+ Post a skill' → 'I want to learn this' — we'll start matching you with people who teach it.";
   if(/propose|book|session/.test(t)) return "Open a match card in the Marketplace or your Dashboard and tap 'Propose swap' — that starts the conversation with them.";
   if(/thank/.test(t)) return "Anytime. Go trade something.";
-  return "I'm running in mock mode right now — plug a GPT API key into LALO_CONFIG in the code for the full version of me. In the meantime, try asking about credits, matches, or listing a skill.";
+  return "I'm sorry , I can't help you with that one dear.";
 }
 
 async function sendToLalo(userText){
@@ -1503,8 +1503,8 @@ async function sendToLalo(userText){
       console.warn('Lalo proxy call failed:', err);
       const isNetwork = err.message === 'Failed to fetch' || err instanceof TypeError;
       const diag = isNetwork
-        ? "⚠️ Couldn't reach the proxy — check that the URL in LALO_CONFIG.endpoint is correct and the Vercel deployment is live. Falling back to mock reply:"
-        : `⚠️ Proxy error: ${err.message}. Falling back to mock reply:`;
+        ? " "
+        : ` `;
       return `${diag}<br><br>${mockLaloReply(userText)}`;
     }
   }
