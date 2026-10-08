@@ -94,7 +94,6 @@ section{padding:80px 0;}
   font-family:'JetBrains Mono',monospace; font-size:12.5px; letter-spacing:.14em; text-transform:uppercase;
   color:var(--lavender); display:flex; align-items:center; gap:10px; margin-bottom:18px;
 }
-.eyebrow::before{content:''; width:22px; height:1px; background:var(--lavender);}
 
 /* ---------- hero ---------- */
 .hero{padding:70px 0 40px; position:relative;}
@@ -474,6 +473,56 @@ footer{border-top:1px solid rgba(255,255,255,.08); padding:40px 0 60px; color:va
   .grid{grid-template-columns:1fr;}
   section{padding:56px 0;}
 }
+
+/* ---------- session experience ---------- */
+.sessions-panel{margin-top:18px;}
+.session-card{background:var(--paper);color:var(--text-on-paper);border-radius:18px;padding:18px;margin-top:12px;border:1px solid var(--paper-line);box-shadow:0 14px 30px -20px rgba(0,0,0,.55);}
+.session-top{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;}
+.session-person{display:flex;gap:11px;align-items:center;}
+.session-person .av{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;color:#1c1424;}
+.session-person .sn{font-family:'Fraunces',serif;font-size:18px;font-weight:600;}
+.session-meta{font-family:'JetBrains Mono',monospace;font-size:11px;color:#6b6178;margin-top:3px;}
+.session-mode{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border-radius:999px;background:var(--paper-dim);font-family:'JetBrains Mono',monospace;font-size:10.5px;font-weight:600;}
+.session-status{font-size:12px;color:#6b6178;margin:12px 0;}
+.session-actions{display:flex;gap:8px;flex-wrap:wrap;}
+.session-actions button{border:none;border-radius:999px;padding:9px 14px;font-size:12.5px;font-weight:600;}
+.btn-session{background:var(--ink);color:var(--paper);}
+.btn-session.alt{background:var(--paper-dim);color:var(--text-on-paper);}
+.session-page{position:fixed;inset:0;background:var(--ink);z-index:500;overflow:auto;}
+.session-shell{max-width:1100px;margin:0 auto;padding:28px 24px 60px;}
+.session-nav{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px;}
+.session-title{font-family:'Fraunces',serif;font-size:clamp(30px,5vw,48px);margin:0;}
+.session-sub{color:var(--muted);margin:6px 0 0;}
+.session-layout{display:grid;grid-template-columns:1fr 300px;gap:18px;}
+.session-main,.session-side{background:var(--ink-soft);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:20px;}
+.video-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.video-tile{background:#09070d;border:1px solid rgba(255,255,255,.1);border-radius:16px;overflow:hidden;position:relative;min-height:280px;}
+.video-tile video{width:100%;height:100%;min-height:280px;object-fit:cover;background:#09070d;}
+.video-label{position:absolute;left:12px;bottom:12px;background:rgba(10,7,14,.75);backdrop-filter:blur(6px);padding:6px 10px;border-radius:999px;font-size:11px;}
+.call-controls{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px;}
+.call-controls button{background:var(--ink-softer);color:var(--paper);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:9px 13px;font-size:12px;}
+.call-controls button.primary{background:var(--lime);color:#1c2400;border-color:var(--lime);}
+.signal-box{margin-top:16px;}
+.signal-box textarea{width:100%;min-height:90px;background:var(--ink);color:var(--paper);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:10px;font-family:'JetBrains Mono',monospace;font-size:11px;resize:vertical;}
+.signal-box .row{display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;}
+.chat-wrap{display:flex;flex-direction:column;height:min(70vh,620px);}
+.chat-messages{flex:1;overflow:auto;display:flex;flex-direction:column;gap:9px;padding:8px;}
+.chat-bubble{max-width:78%;padding:10px 13px;border-radius:14px;font-size:13.5px;line-height:1.45;}
+.chat-bubble.me{align-self:flex-end;background:var(--lime);color:#1c2400;border-bottom-right-radius:4px;}
+.chat-bubble.them{align-self:flex-start;background:var(--ink-softer);border-bottom-left-radius:4px;}
+.chat-input{display:flex;gap:8px;margin-top:12px;}
+.chat-input input{flex:1;background:var(--ink);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:11px 15px;color:var(--paper);font-family:inherit;}
+.chat-input button{width:42px;border:none;border-radius:50%;background:var(--lime);color:#1c2400;font-weight:700;}
+.complete-box{background:var(--ink-softer);border-radius:14px;padding:15px;margin-top:14px;}
+.complete-box h4{margin:0 0 6px;font-family:'Fraunces',serif;font-size:18px;}
+.complete-box p{color:var(--muted);font-size:12.5px;line-height:1.5;margin:0 0 12px;}
+.complete-status{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--lime);}
+.irl-check{display:grid;gap:10px;margin-top:16px;}
+.check-row{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px;background:var(--ink);border-radius:12px;}
+.check-row span{font-size:13px;}
+.check-row button{border:none;border-radius:999px;padding:7px 11px;font-size:11px;font-weight:600;}
+@media(max-width:760px){.session-layout{grid-template-columns:1fr}.video-grid{grid-template-columns:1fr}.video-tile,.video-tile video{min-height:220px}}
+
 </style>
 </head>
 <body>
@@ -674,8 +723,19 @@ footer{border-top:1px solid rgba(255,255,255,.08); padding:40px 0 60px; color:va
 <!-- ===================== DASHBOARD VIEW ===================== -->
 <div id="view-dashboard" style="display:none;">
   <section style="padding-top:44px;">
+    <div class="eyebrow">Your sessions</div>
+    <div class="sec-head"><h2>My Swaps</h2><p>Everything you've booked, all in one place.</p></div>
+    <div class="panel sessions-panel" style="margin:0 0 22px;">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap;">
+        <div>
+          <h3 style="font-family:'Fraunces',serif;font-size:22px;margin:0 0 6px;">Booked sessions</h3>
+          <p style="color:var(--muted);font-size:13px;margin:0;">Open a session here when it's time to meet, chat, or confirm an in-person swap.</p>
+        </div>
+        <span class="session-mode" style="font-size:12px;" id="sessionCountBadge">No bookings yet</span>
+      </div>
+      <div id="sessionList" style="margin-top:16px;"></div>
+    </div>
     <div class="eyebrow">Your account</div>
-    <div class="sec-head"><h2>My Swaps</h2></div>
     <div class="dash-grid">
       <div>
         <div class="panel credit-hero">
@@ -921,6 +981,7 @@ function renderDashboard(){
   const top = [...users].sort((a,b)=>matchInfo(b).score-matchInfo(a).score).slice(0,4);
   document.getElementById('dashMatches').innerHTML = top.map(u=>cardHTML(u,true)).join('');
   document.getElementById('activityLog').innerHTML = activity.map(a=>`<div class="act-item"><span class="a-l">${a.l}</span><span class="a-t">${a.t}</span></div>`).join('');
+  renderSessions();
 }
 
 /* ---------------- view switching ---------------- */
@@ -1103,6 +1164,295 @@ function renderEvents(){
 /* ---------------- booking / session modal ---------------- */
 const TIMESLOTS = ['09:00','10:00','11:00','12:00','14:00','15:00','16:00','17:00','18:00','19:00','20:00','21:00'];
 let booking = {uid:null, date:null, time:null, contact:'video', skill:null};
+let sessions = [];
+let activeSession = null;
+let rtc = {pc:null, localStream:null, dataChannel:null, pendingCandidates:[]};
+
+function sessionModeLabel(mode){
+  return {video:'▣ Video call', message:'▢ In-app chat', irl:'◎ In person'}[mode] || mode;
+}
+function sessionDateTime(sess){
+  return `${fmtDate(sess.date).full} · ${sess.time}`;
+}
+function initials(name){ return name.split(' ').map(w=>w[0]).join('').slice(0,3); }
+
+function renderSessions(){
+  const el=document.getElementById('sessionList');
+  const badge=document.getElementById('sessionCountBadge');
+  if(badge) badge.textContent = sessions.length ? `${sessions.length} booked ${sessions.length===1?'session':'sessions'}` : 'No bookings yet';
+  if(!el) return;
+  if(!sessions.length){
+    el.innerHTML='<p style="color:var(--muted);font-size:13px;">No booked sessions yet.</p>';
+    return;
+  }
+  el.innerHTML=sessions.slice().reverse().map(sess=>{
+    const u=users.find(x=>x.id===sess.uid) || {name:'Participant',color:'linear-gradient(135deg,#B7A9DC,#6f5f9e)'};
+    let status = sess.completed ? 'Completed' : (sess.contact==='irl' ? 'Waiting for meeting completion' : 'Ready when scheduled');
+    return `<div class="session-card">
+      <div class="session-top">
+        <div class="session-person">
+          <div class="av" style="background:${u.color}">${initials(u.name)}</div>
+          <div><div class="sn">${u.name}</div><div class="session-meta">${sess.skill} · ${sessionDateTime(sess)}</div></div>
+        </div>
+        <span class="session-mode">${sessionModeLabel(sess.contact)}</span>
+      </div>
+      <div class="session-status">${status}</div>
+      <div class="session-actions">
+        ${sess.completed
+          ? '<button class="btn-session alt" disabled>✓ Completed</button>'
+          : `<button class="btn-session" data-open-session="${sess.id}">${sess.contact==='video'?'Open video call':sess.contact==='message'?'Open chat':'Open meeting'}</button>`}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function destroyRTC(){
+  try{ if(rtc.dataChannel) rtc.dataChannel.close(); }catch(e){}
+  try{ if(rtc.pc) rtc.pc.close(); }catch(e){}
+  if(rtc.localStream) rtc.localStream.getTracks().forEach(t=>t.stop());
+  rtc={pc:null,localStream:null,dataChannel:null,pendingCandidates:[]};
+}
+
+function closeSessionPage(){
+  destroyRTC();
+  const page=document.getElementById('sessionPage');
+  if(page) page.remove();
+  activeSession=null;
+}
+
+function addChatMessage(text, mine){
+  const box=document.getElementById('sessionChatMessages');
+  if(!box) return;
+  const safe=String(text).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[c]));
+  box.insertAdjacentHTML('beforeend',`<div class="chat-bubble ${mine?'me':'them'}">${safe}</div>`);
+  box.scrollTop=box.scrollHeight;
+}
+
+function sessionPageBase(sess,u,content){
+  const page=document.createElement('div');
+  page.className='session-page'; page.id='sessionPage';
+  page.innerHTML=`<div class="session-shell">
+    <div class="session-nav">
+      <div>
+        <div class="eyebrow" style="margin-bottom:8px;">MindSwapped session</div>
+        <h1 class="session-title">${sess.skill}</h1>
+        <p class="session-sub">with ${u.name} · ${sessionDateTime(sess)} · ${sessionModeLabel(sess.contact)}</p>
+      </div>
+      <button class="btn btn-ghost" id="leaveSessionBtn">← Back to My Swaps</button>
+    </div>${content}</div>`;
+  document.body.appendChild(page);
+  document.getElementById('leaveSessionBtn').onclick=closeSessionPage;
+  return page;
+}
+
+function openSession(sessId){
+  const sess=sessions.find(x=>x.id===sessId);
+  if(!sess) return;
+  closeSessionPage();
+  activeSession=sess;
+  const u=users.find(x=>x.id===sess.uid) || {name:'Participant',color:'linear-gradient(135deg,#B7A9DC,#6f5f9e)'};
+
+  if(sess.contact==='message') openChatSession(sess,u);
+  else if(sess.contact==='irl') openIRLSession(sess,u);
+  else openVideoSession(sess,u);
+}
+
+function openChatSession(sess,u){
+  sessionPageBase(sess,u,`<div class="session-layout">
+    <div class="session-main chat-wrap">
+      <div id="sessionChatMessages" class="chat-messages">
+        <div class="chat-bubble them">Heyyy 👋 you made it!</div>
+        <div class="chat-bubble me">Haha yep 😄 looking forward to the swap.</div>
+        <div class="chat-bubble them">Same! I think this is gonna be pretty chill.</div>
+        <div class="chat-bubble me">Nice. I’ll be around a few minutes before the session.</div>
+        <div class="chat-bubble them">Perfect, see you then! 🙌</div>
+      </div>
+      <form class="chat-input" id="sessionChatForm">
+        <input id="sessionChatInput" autocomplete="off" placeholder="Write a message...">
+        <button type="submit">↑</button>
+      </form>
+    </div>
+    <aside class="session-side">
+      <h3 style="font-family:'Fraunces',serif;margin-top:0;">Session details</h3>
+      <p style="color:var(--muted);font-size:13px;line-height:1.55;">Demo chat for now — the other participant's messages are hard-coded so you can test the session flow without another account.</p>
+      <div class="complete-box">
+        <h4>Finish the swap</h4>
+        <p>After the session, mark it complete.</p>
+        <div class="complete-status">${sess.completed?'✓ Session completed':'● Session active'}</div>
+        <button class="btn btn-lime" style="margin-top:12px;width:100%;" id="completeSessionBtn" ${sess.completed?'disabled':''}>${sess.completed?'Completed':'Mark session complete'}</button>
+      </div>
+    </aside>
+  </div>`);
+
+  const demoReplies = [
+    'Yep, sounds good 😄',
+    'Cool! I’m ready whenever you are.',
+    'Haha nice, this should be fun.',
+    'Got it — see you soon!',
+    'Awesome 🙌 catch you at the session.'
+  ];
+  let replyIndex = 0;
+
+  document.getElementById('sessionChatForm').onsubmit=e=>{
+    e.preventDefault();
+    const inp=document.getElementById('sessionChatInput');
+    const text=inp.value.trim(); if(!text)return;
+    addChatMessage(text,true); inp.value='';
+    setTimeout(()=>addChatMessage(demoReplies[replyIndex++ % demoReplies.length],false),350);
+  };
+  document.getElementById('completeSessionBtn').onclick=()=>completeSession(sess.id);
+}
+
+async function openVideoSession(sess,u){
+  sessionPageBase(sess,u,`<div class="session-layout">
+    <div class="session-main">
+      <div class="video-grid">
+        <div class="video-tile"><video id="localVideo" autoplay muted playsinline></video><span class="video-label">You</span></div>
+        <div class="video-tile"><video id="remoteVideo" autoplay playsinline></video><span class="video-label">${u.name}</span></div>
+      </div>
+      <div class="call-controls">
+        <button class="primary" id="startCameraBtn">Start camera & mic</button>
+        <button id="createOfferBtn">Create offer</button>
+        <button id="createAnswerBtn">Create answer</button>
+        <button id="applySignalBtn">Apply remote signal</button>
+        <button id="endCallBtn">End call</button>
+      </div>
+      <div class="signal-box">
+        <div class="eyebrow" style="margin-top:16px;">Peer connection</div>
+        <p style="color:var(--muted);font-size:12px;line-height:1.5;">WebRTC encrypts the audio/video peer-to-peer. This prototype uses manual signaling: one person creates an offer, the other creates an answer, and you exchange the text below. For production, replace this with a signaling server.</p>
+        <textarea id="signalBox" placeholder="Paste the other person's offer/answer here, or copy yours to them."></textarea>
+        <div class="row">
+          <button class="btn btn-ghost" id="copySignalBtn">Copy my signal</button>
+          <button class="btn btn-lime" id="setSignalBtn">Use pasted signal</button>
+        </div>
+      </div>
+    </div>
+    <aside class="session-side">
+      <h3 style="font-family:'Fraunces',serif;margin-top:0;">Private video room</h3>
+      <p style="color:var(--muted);font-size:13px;line-height:1.55;">No video is sent through MindSwapped itself. WebRTC establishes an encrypted media connection between the two browsers once signaling is completed.</p>
+      <div class="complete-box">
+        <h4>Finish the swap</h4>
+        <p>After you're done, mark the session complete to finalize the credit transfer.</p>
+        <div class="complete-status">${sess.completed?'✓ Session completed':'● Session active'}</div>
+        <button class="btn btn-lime" style="margin-top:12px;width:100%;" id="completeSessionBtn" ${sess.completed?'disabled':''}>${sess.completed?'Completed':'Mark session complete'}</button>
+      </div>
+    </aside>
+  </div>`);
+
+  document.getElementById('startCameraBtn').onclick=async()=>{
+    try{
+      rtc.localStream=await navigator.mediaDevices.getUserMedia({video:true,audio:true});
+      document.getElementById('localVideo').srcObject=rtc.localStream;
+      ensurePC(sess);
+      rtc.localStream.getTracks().forEach(t=>rtc.pc.addTrack(t,rtc.localStream));
+      showToast('Camera and microphone ready');
+    }catch(e){showToast('Camera/microphone permission was blocked');}
+  };
+  document.getElementById('createOfferBtn').onclick=async()=>{
+    ensurePC(sess);
+    const offer=await rtc.pc.createOffer();
+    await rtc.pc.setLocalDescription(offer);
+    document.getElementById('signalBox').value=JSON.stringify(rtc.pc.localDescription);
+  };
+  document.getElementById('createAnswerBtn').onclick=async()=>{
+    try{
+      const remote=JSON.parse(document.getElementById('signalBox').value);
+      ensurePC(sess);
+      await rtc.pc.setRemoteDescription(remote);
+      const answer=await rtc.pc.createAnswer();
+      await rtc.pc.setLocalDescription(answer);
+      document.getElementById('signalBox').value=JSON.stringify(rtc.pc.localDescription);
+    }catch(e){showToast('Paste a valid offer first');}
+  };
+  document.getElementById('setSignalBtn').onclick=async()=>{
+    try{
+      const remote=JSON.parse(document.getElementById('signalBox').value);
+      ensurePC(sess);
+      await rtc.pc.setRemoteDescription(remote);
+      showToast('Remote signal applied');
+    }catch(e){showToast('Invalid signal');}
+  };
+  document.getElementById('applySignalBtn').onclick=()=>document.getElementById('setSignalBtn').click();
+  document.getElementById('copySignalBtn').onclick=async()=>{
+    await navigator.clipboard.writeText(document.getElementById('signalBox').value);
+    showToast('Signal copied');
+  };
+  document.getElementById('endCallBtn').onclick=()=>{destroyRTC();showToast('Call ended');};
+  document.getElementById('completeSessionBtn').onclick=()=>completeSession(sess.id);
+}
+
+function ensurePC(sess){
+  if(rtc.pc) return;
+  rtc.pc=new RTCPeerConnection({
+    iceServers:[{urls:'stun:stun.l.google.com:19302'}]
+  });
+  rtc.pc.ontrack=e=>{
+    const v=document.getElementById('remoteVideo');
+    if(v) v.srcObject=e.streams[0];
+  };
+  rtc.pc.ondatachannel=e=>{ rtc.dataChannel=e.channel; };
+  rtc.pc.onicecandidate=()=>{
+    if(rtc.pc.localDescription){
+      const box=document.getElementById('signalBox');
+      if(box) box.value=JSON.stringify(rtc.pc.localDescription);
+    }
+  };
+}
+
+function openIRLSession(sess,u){
+  sessionPageBase(sess,u,`<div class="session-layout">
+    <div class="session-main">
+      <div class="panel" style="background:var(--ink);">
+        <div class="eyebrow">In-person meeting</div>
+        <h2 style="font-family:'Fraunces',serif;font-size:32px;margin:0 0 8px;">Meet ${u.name} in person.</h2>
+        <p style="color:var(--muted);line-height:1.6;font-size:14px;">Your booking is the agreement to meet at the scheduled time. Keep the actual meeting details in the chat/booking record rather than exposing them publicly.</p>
+        <div class="complete-box">
+          <h4>Completion & credit release</h4>
+          <p>Like a ride/payment completion flow: the session isn't finalized just because it was booked. When the meeting is actually finished, both sides should confirm completion before the credits are released.</p>
+          <div class="irl-check">
+            <div class="check-row"><span>You confirm the meeting happened</span><button id="youCompleteBtn" style="background:var(--lime);color:#1c2400;">${sess.youConfirmed?'✓ Confirmed':'Confirm'}</button></div>
+            <div class="check-row"><span>${u.name} confirms the meeting</span><span class="complete-status">${sess.otherConfirmed?'✓ Confirmed':'Waiting'}</span></div>
+          </div>
+          <div class="complete-status" style="display:block;margin-top:12px;">${sess.completed?'✓ Credits finalized':'● Credits held until both confirmations'}</div>
+        </div>
+      </div>
+    </div>
+    <aside class="session-side">
+      <h3 style="font-family:'Fraunces',serif;margin-top:0;">Session receipt</h3>
+      <div class="session-meta" style="font-size:12px;line-height:1.9;">
+        <div>PERSON: ${u.name}</div><div>SKILL: ${sess.skill}</div><div>DATE: ${sessionDateTime(sess)}</div><div>FORMAT: IN PERSON</div><div>COST: 2 CR</div>
+      </div>
+      <button class="btn btn-ghost" style="width:100%;margin-top:18px;" id="simulateOtherConfirm">Demo: other person confirms</button>
+      <p style="color:var(--muted);font-size:11px;line-height:1.5;margin-top:12px;">The demo button is only for this front-end prototype. In production, the other participant would confirm from their own account.</p>
+    </aside>
+  </div>`);
+  document.getElementById('youCompleteBtn').onclick=()=>{
+    sess.youConfirmed=true; tryFinalizeSession(sess); openSession(sess.id);
+  };
+  document.getElementById('simulateOtherConfirm').onclick=()=>{
+    sess.otherConfirmed=true; tryFinalizeSession(sess); openSession(sess.id);
+  };
+}
+
+function tryFinalizeSession(sess){
+  if(sess.youConfirmed && sess.otherConfirmed && !sess.completed){
+    sess.completed=true;
+    // The booking already deducted the learner's credits. Completion is the release condition.
+    activity.unshift({l:`Completed ${sess.skill} session with ${users.find(u=>u.id===sess.uid)?.name||'participant'}`,t:'just now'});
+    renderDashboard();
+    showToast('Session completed — credits finalized');
+  }
+}
+function completeSession(id){
+  const sess=sessions.find(x=>x.id===id);
+  if(!sess)return;
+  sess.youConfirmed=true;
+  // Online prototype lets the user finish their side; IRL explicitly waits for both.
+  if(sess.contact!=='irl') { sess.otherConfirmed=true; }
+  tryFinalizeSession(sess);
+  if(activeSession && activeSession.id===id) openSession(id);
+}
+
 
 function openBookingModal(uid){
   const u = users.find(x=>x.id===Number(uid));
@@ -1195,9 +1545,22 @@ function openBookingModal(uid){
     if(you.credits < 2){ showToast("Not enough credits — teach a session first"); return; }
     you.credits -= 2;
     const d = fmtDate(booking.date);
+    const newSession = {
+      id:'s_'+Date.now(),
+      uid:u.id,
+      skill:booking.skill,
+      date:booking.date,
+      time:booking.time,
+      contact:booking.contact,
+      cost:2,
+      completed:false,
+      youConfirmed:false,
+      otherConfirmed:false
+    };
+    sessions.push(newSession);
     activity.unshift({l:`Booked ${booking.skill} with ${u.name} — ${d.m} ${d.d}, ${booking.time}`, t:'just now'});
     closeModal();
-    showToast(`Session booked with ${u.name}`);
+    showToast(`${sessionModeLabel(booking.contact)} booked with ${u.name}`);
     renderDashboard();
     if(currentView==='marketplace') renderMarket();
   });
@@ -1431,7 +1794,7 @@ function openProfileModal(uid){
    The proxy holds your OpenAI key server-side — leave endpoint empty to
    keep using the built-in mock responses below. */
 const LALO_CONFIG = {
-  apiKey:'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',
+  apiKey:'',
   endpoint: 'https://skilltradeapp.vercel.app/api/lalo',   
   model: 'gpt-4o-mini',                 // e.g. 'https://your-project.vercel.app/api/lalo'
   systemPrompt: "You are Lalo, the friendly in-app assistant for MindSwapped, a skill-swap community with a credit system (teaching earns credits, learning spends them). Keep replies short, warm, and practical."
@@ -1558,6 +1921,9 @@ document.addEventListener('click', e=>{
 
   const bookBtn = e.target.closest('[data-book]');
   if(bookBtn){ closeModal(); openBookingModal(bookBtn.dataset.book); return; }
+
+  const sessionBtn = e.target.closest('[data-open-session]');
+  if(sessionBtn){ openSession(sessionBtn.dataset.openSession); return; }
 
   const revBtn = e.target.closest('[data-review]');
   if(revBtn){ closeModal(); openReviewModal(revBtn.dataset.review); return; }
